@@ -26,34 +26,10 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>com.google.cloud.tools</groupId>
-                <artifactId>jib-maven-plugin</artifactId>
-                <version>3.3.1</version>
-<!--                <version>3.4.3</version>-->
-                <configuration>
-                    <!--from节点用来设置镜像的基础镜像，相当于Docerkfile中的FROM关键字-->
-                    <from>
-                        <!--基础镜像名称(建议使用国内公开镜像，下载速度快，更稳定) -->
-                        <image>java:openjdk-8u111-alpine</image>
-                    </from>
-                    <to>
-                        <!--镜像名称和tag，使用了mvn内置变量${project.version}，表示当前工程的version-->
-                        <image>demo:1</image>
-                    </to>
-                    <!--容器相关的属性-->
-                    <container>
-                        <!--jvm内存参数-->
-                        <jvmFlags>
-                            <jvmFlag>-Xms4g</jvmFlag>
-                            <jvmFlag>-Xmx4g</jvmFlag>
-                        </jvmFlags>
-                        <!--要暴露的端口-->
-                        <ports>
-                            <port>8081</port>
-                        </ports>
-                    </container>
-                </configuration>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+
         </plugins>
     </build>
 
