@@ -20,6 +20,8 @@
         <module>redis</module>
         <module>es</module>
         <module>docker</module>
+        <module>kafka</module>
+        <module>office</module>
     </modules>
 
     <properties>
